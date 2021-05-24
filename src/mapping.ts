@@ -24,7 +24,7 @@ export function handleTransfer(event: Transfer): void {
   userTo.save()
   userFrom.save()
 
-  if(event.block.number.toI32() >= 11546769) {
+  if(event.block.number.toI32() >= 11456769) {
     abort("fail subgraph on purpose")
   }
 }
