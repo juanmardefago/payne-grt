@@ -15,7 +15,7 @@ export function handleTransfer(event: Transfer): void {
 
   if(userFrom == null) {
     userFrom = new User(event.params.from.toHexString())
-    userTo.balance = BigInt.fromI32(0)
+    userFrom.balance = BigInt.fromI32(0)
   }
 
   userTo.balance = userTo.balance.plus(event.params.value)
