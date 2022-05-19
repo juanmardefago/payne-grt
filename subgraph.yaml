@@ -8,10 +8,10 @@ dataSources:
     source:
       address: "0xc944E90C64B2c07662A292be6244BDf05Cda44a7"
       abi: GRT
-      startBlock: 11446769
+      startBlock: 14806715
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.4
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - User
@@ -19,6 +19,6 @@ dataSources:
         - name: GRT
           file: ./abis/GRT.json
       eventHandlers:
-        - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleTransfer
+        - event: NewOwnership(indexed address,indexed address)
+          handler: handleNewOwnership
       file: ./src/mapping.ts
